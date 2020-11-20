@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html>
     <head>
@@ -54,6 +53,7 @@
             <div>
                 <button class="leftButton">Submit</button>
                 <button class="rightButton">Reset</button>
+                <button class="btn-toggle">Toggle</button>
             </div>
         </form>
         <script>
@@ -90,7 +90,7 @@
             const password = document.querySelector('#password')
             const passError = document.querySelector('.pass-error')
             password.addEventListener('input', function(){
-                let passRegex = RegExp('^[a-zA-Z0-9]{8,}$')
+                let passRegex = RegExp('^(?=.*\\d)(?=.*[A-Z])(?=.*[$&+,:;=?@#|<>.^*()%!-]).{1}(?=.*[\\S]).{8,}$')
                 if(passRegex.test(password.value))
                     passError.textContent = ""
                 else 
@@ -102,7 +102,7 @@
             output.textContent = salary.value;
             salary.addEventListener('input', function(){
                 output.textContent = salary.value
-            })
+            })           
         </script>
     </body>
 </html>
