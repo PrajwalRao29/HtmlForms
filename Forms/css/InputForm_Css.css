@@ -1,3 +1,4 @@
+  
 body{
     margin: 0px auto;
     max-width: 800px;
@@ -36,13 +37,55 @@ button{
 }
 .rightButton {
     margin-left: 2%;
+    margin-right: 2%;
 }
 .leftButton {
     margin-right: 2%;
+}
+.btn-toggle{
+    margin-left: 2%;
+}
+#datetime{
+    width: 21.5%;
 }
 
 error-output{
     font-size: 12px;
     font-style: italic;
     color: red;
+}
+
+@media only screen and (max-width: 450px){
+    header{
+        font-size: 20px;
+    }
+    label {
+        font-size: 12px;
+        width: 39%;
+    }
+    input {
+        width: 40%;
+    }
+    #datetime{
+        width: 40%;
+    }
+}
+
+body {
+    color: #222;
+    background-color: #fff;
+  }
+body.dark-theme {
+    color: #eee;
+    background-color: #121212;
+  }
+@media (prefers-color-scheme: dark) {
+    body {
+      color: #eee;
+      background-color: #121212;
+    }
+    body.light-theme {
+      color: #222;
+      background-color: #fff;
+    }
 }
